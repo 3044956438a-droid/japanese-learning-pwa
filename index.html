@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#667eea">
+    <meta name="description" content="简单高效的日语学习工具">
+    
+    <title>日语学习</title>
+    
+    <!-- 引用样式文件 -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- PWA配置 -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+<body>
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 单词卡片 -->
+        <div class="word-card">
+            <div class="japanese" id="japanese">こんにちは</div>
+            <div class="romaji" id="romaji">konnichiwa</div>
+            <div class="chinese" id="chinese">你好</div>
+        </div>
+        
+        <!-- 进度显示 -->
+        <div class="progress" id="progress">第 1/5 个单词</div>
+        
+        <!-- 统计信息 -->
+        <div class="stats" id="stats">
+            <div class="stat-item">
+                <span class="stat-label">正确</span>
+                <span class="stat-value" id="correctCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">错误</span>
+                <span class="stat-value" id="incorrectCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">正确率</span>
+                <span class="stat-value" id="accuracy">0%</span>
+            </div>
+        </div>
+        
+        <!-- 按钮组 -->
+        <div class="buttons">
+            <button class="btn btn-speaker" id="speakBtn" title="再听一次">🔊</button>
+            <button class="btn btn-toggle" id="toggleBtn" title="显示/隐藏答案">👁️</button>
+            <button class="btn" id="correctBtn" title="答对了">✓</button>
+            <button class="btn" id="incorrectBtn" title="答错了">✗</button>
+            <button class="btn" id="nextBtn">下一个</button>
+        </div>
+        
+        <!-- 模式切换 -->
+        <div class="mode-switch">
+            <button class="mode-btn" id="learningMode">学习模式</button>
+            <button class="mode-btn" id="testMode">测试模式</button>
+        </div>
+    </div>
+
+    <!-- 引用数据文件 -->
+    <script src="data.js"></script>
+    <!-- 引用主逻辑文件 -->
+    <script src="app.js"></script>
+</body>
+</html>
